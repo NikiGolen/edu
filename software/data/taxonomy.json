@@ -1,0 +1,97 @@
+{
+  "title": "Software",
+  "children": [
+    {
+      "id": "1",
+      "title": "System Software",
+      "subtitle": "Core Infrastructure, Control, & Maintenance",
+      "children": [
+        { "id": "1.1", "title": "Operating Systems", "subtitle": "OS Environments", "summary": "Desktop, Mobile, Server" },
+        { "id": "1.2", "title": "Kernels", "subtitle": "Hardware Management", "summary": "Monolithic, Hybrid, Microkernels" },
+        { "id": "1.3", "title": "Virtualization & Hypervisors", "subtitle": "Cloud Foundations", "summary": "Type 1 (Bare Metal), Type 2 (Hosted)" },
+        { "id": "1.4", "title": "Device Drivers & Firmware", "subtitle": "Hardware Drivers/BIOS" },
+        { "id": "1.5", "title": "System Utilities & Shells", "subtitle": "Diagnostics, Backup, Command Lines like Bash" }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Infrastructure, Middleware & Server Software",
+      "subtitle": "Backstage Engines",
+      "children": [
+        { "id": "2.1", "title": "Web Servers & Caching", "subtitle": "HTTP Handlers, Proxies/CDNs" },
+        { "id": "2.2", "title": "Database Management Systems", "subtitle": "DBMS — Relational SQL Engines, NoSQL" },
+        { "id": "2.3", "title": "Containerization & Orchestration", "subtitle": "Docker, Kubernetes" },
+        { "id": "2.4", "title": "Enterprise Middleware & Integration", "subtitle": "Message Brokers, API Gateways" },
+        { "id": "2.5", "title": "Cloud Infrastructure Platforms", "subtitle": "IaaS & PaaS Control Planes" }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Application Software",
+      "subtitle": "User-Facing Tools",
+      "children": [
+        { "id": "3.1", "title": "Web Browsers & Productivity", "subtitle": "Chrome, Edge, Word, Sheets" },
+        { "id": "3.2", "title": "Communication & Media", "subtitle": "Slack, Zoom, VLC, Streaming" },
+        { "id": "3.3", "title": "Content Creation & Gaming", "subtitle": "Adobe, Blender, Steam" },
+        { "id": "3.4", "title": "Enterprise Operations", "subtitle": "ERP, CRM" }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Development Software",
+      "subtitle": "Engineering Tools",
+      "children": [
+        { "id": "4.1", "title": "Languages & API Specifications", "subtitle": "SQL, Web, High-Level, REST/GraphQL Rules" },
+        { "id": "4.2", "title": "Compilers, Interpreters, Runtimes", "subtitle": "GCC, Python, Node.js" },
+        { "id": "4.3", "title": "IDEs & Editors", "subtitle": "VS Code, IntelliJ" },
+        { "id": "4.4", "title": "Version Control, Packaging, DevOps", "subtitle": "Git, npm, Jenkins" }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Embedded & Real-Time",
+      "subtitle": "Hardware-Bound Logic",
+      "children": [
+        { "id": "5.1", "title": "Real-Time OS", "subtitle": "RTOS" },
+        { "id": "5.2", "title": "Microcontroller Firmware & Industrial", "subtitle": "SCADA/HMI" }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Artificial Intelligence & Data",
+      "subtitle": "AI/Big Data Platforms",
+      "children": [
+        { "id": "6.1", "title": "Neural Networks & Models", "subtitle": "LLM, Diffusion" },
+        { "id": "6.2", "title": "ML Frameworks", "subtitle": "PyTorch, TensorFlow" },
+        { "id": "6.3", "title": "Data Processing", "subtitle": "Spark, BI/Tableau" }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Cyber Security",
+      "subtitle": "Defensive/Offensive Systems",
+      "children": [
+        { "id": "7.1", "title": "Malicious", "subtitle": "Malware, Ransomware" },
+        { "id": "7.2", "title": "Security Tools", "subtitle": "Antivirus, Firewall, SIEM" }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Scientific & Specialized",
+      "subtitle": "Computing & CAD",
+      "children": [
+        { "id": "8.1", "title": "Computation", "subtitle": "MATLAB, R-Studio" },
+        { "id": "8.2", "title": "Design & GIS", "subtitle": "AutoCAD, QGIS" }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Decentralized & Web3",
+      "subtitle": "Blockchain",
+      "children": [
+        { "id": "9.1", "title": "Blockchain Protocol Clients", "subtitle": "Bitcoin Core, Geth" },
+        { "id": "9.2", "title": "Smart Contracts", "subtitle": "Solidity, Foundry" }
+      ]
+    }
+  ]
+}
