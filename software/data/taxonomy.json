@@ -6,160 +6,274 @@
       "title": "System Software",
       "subtitle": "Core Infrastructure, Control, & Maintenance",
       "children": [
-        { "id": "1.1", "title": "Operating Systems", "subtitle": "OS Environments", "summary": "Desktop, Mobile, Server" },
         {
-  "id": "1.2",
-  "title": "Kernels",
-  "subtitle": "Hardware Management",
-  "summary": "The core program that mediates between hardware and every other layer of software.",
-  "children": [
-    {
-      "id": "1.2.1",
-      "title": "Monolithic",
-      "subtitle": "Single high-privileged memory space",
-      "summary": "All operating system processes, drivers, and file systems run inside a single, high-privileged memory space. Split by how they handle code loading.",
-      "children": [
+          "id": "1.1",
+          "title": "Operating Systems",
+          "subtitle": "OS Environments",
+          "summary": "Desktop, Mobile, Server"
+        },
         {
-          "id": "1.2.1.1",
-          "title": "Static Monolithic",
-          "summary": "The entire kernel and all supported hardware drivers are compiled into one unchangeable binary file. Adding a new driver or changing a core service requires recompiling the entire kernel from scratch.",
+          "id": "1.2",
+          "title": "Kernels",
+          "subtitle": "Hardware Management",
+          "summary": "The core program that mediates between hardware and every other layer of software.",
           "children": [
-            { "id": "1.2.1.1.1", "title": "Early Unix", "summary": "An early static monolithic kernel example." },
-            { "id": "1.2.1.1.2", "title": "MS-DOS", "summary": "An early static monolithic kernel example." }
+            {
+              "id": "1.2.1",
+              "title": "Monolithic",
+              "subtitle": "Single high-privileged memory space",
+              "summary": "All operating system processes, drivers, and file systems run inside a single, high-privileged memory space. Split by how they handle code loading.",
+              "children": [
+                {
+                  "id": "1.2.1.1",
+                  "title": "Static Monolithic",
+                  "summary": "The entire kernel and all supported hardware drivers are compiled into one unchangeable binary file. Adding a new driver or changing a core service requires recompiling the entire kernel from scratch.",
+                  "children": [
+                    {
+                      "id": "1.2.1.1.1",
+                      "title": "Early Unix",
+                      "summary": "An early static monolithic kernel example."
+                    },
+                    {
+                      "id": "1.2.1.1.2",
+                      "title": "MS-DOS",
+                      "summary": "An early static monolithic kernel example."
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.1.2",
+                  "title": "Modular Monolithic",
+                  "summary": "The system still operates in a unified, high-privileged supervisor mode, but can dynamically load or unload blocks of code \u2014 Loadable Kernel Modules (LKMs) \u2014 at runtime to support new hardware or filesystems without rebooting.",
+                  "children": [
+                    {
+                      "id": "1.2.1.2.1",
+                      "title": "Modern Linux",
+                      "summary": "Ubuntu, Debian, Red Hat \u2014 modular monolithic kernel."
+                    },
+                    {
+                      "id": "1.2.1.2.2",
+                      "title": "FreeBSD",
+                      "summary": "A modular monolithic kernel example."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.2.2",
+              "title": "Hybrid",
+              "subtitle": "Microkernel design, monolithic execution",
+              "summary": "An architectural compromise that maps components like a microkernel but runs them inside a single monolithic address space to eliminate performance-slowing IPC message overhead. Split by structural composition.",
+              "children": [
+                {
+                  "id": "1.2.2.1",
+                  "title": "Subsystem-Based Hybrids",
+                  "summary": "Isolates modular operational subsystems (like the graphics rendering manager or networking layers) inside high-privilege execution modes for maximum execution speed.",
+                  "children": [
+                    {
+                      "id": "1.2.2.1.1",
+                      "title": "Windows NT Kernel",
+                      "summary": "Powers Windows 10 and Windows 11."
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.2.2",
+                  "title": "Composite / Co-Kernels",
+                  "summary": "Fuses two completely different operating system architectures directly together into a single running entity.",
+                  "children": [
+                    {
+                      "id": "1.2.2.2.1",
+                      "title": "Apple XNU Kernel",
+                      "summary": "Powers macOS and iOS. Bridges a Mach microkernel structure together with a monolithic FreeBSD subsystem."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.2.3",
+              "title": "Microkernel",
+              "subtitle": "Minimal core, services in user space",
+              "summary": "The kernel is stripped down to the near-minimum code required to handle thread scheduling, virtual memory mapping, and messaging primitives. Traditional services like device drivers and file systems are kicked out into isolated user spaces. Split by design generation.",
+              "children": [
+                {
+                  "id": "1.2.3.1",
+                  "title": "First-Generation Microkernels",
+                  "summary": "Early versions where sending data back and forth between isolated user-space processes (IPC) suffered from heavy performance overhead and slowdowns.",
+                  "children": [
+                    {
+                      "id": "1.2.3.1.1",
+                      "title": "Early Mach",
+                      "summary": "e.g. Mach 3.0 \u2014 first-generation microkernel example."
+                    },
+                    {
+                      "id": "1.2.3.1.2",
+                      "title": "Early Chorus",
+                      "summary": "A first-generation microkernel example."
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.3.2",
+                  "title": "Second-Generation Microkernels",
+                  "summary": "Redesigned from scratch to make IPC memory-page mapping fast and lightweight, with many versions formally verified for bulletproof security.",
+                  "children": [
+                    {
+                      "id": "1.2.3.2.1",
+                      "title": "L4 Microkernel Family",
+                      "summary": "A second-generation microkernel family."
+                    },
+                    {
+                      "id": "1.2.3.2.2",
+                      "title": "seL4",
+                      "summary": "A formally verified microkernel."
+                    },
+                    {
+                      "id": "1.2.3.2.3",
+                      "title": "Minix 3",
+                      "summary": "A second-generation microkernel example."
+                    },
+                    {
+                      "id": "1.2.3.2.4",
+                      "title": "QNX",
+                      "summary": "Widely deployed in automotive systems."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.2.4",
+              "title": "Nanokernel",
+              "subtitle": "Extreme minimalism",
+              "summary": "An extreme variation of a microkernel shrunk down to near-total minimalism, running in privileged hardware mode to offer basic hardware timing or instruction surfaces. Classified by implementation type.",
+              "children": [
+                {
+                  "id": "1.2.4.1",
+                  "title": "HAL / Virtualization Nanokernels",
+                  "summary": "A thin software layer that handles nothing but hardware interrupt clocks and resource mapping. Often sits underneath a normal operating system to inject real-time responsiveness into it.",
+                  "children": [
+                    {
+                      "id": "1.2.4.1.1",
+                      "title": "KeyKOS",
+                      "summary": "A HAL/virtualization nanokernel example."
+                    },
+                    {
+                      "id": "1.2.4.1.2",
+                      "title": "Adeos",
+                      "summary": "A virtualization layer nanokernel example."
+                    },
+                    {
+                      "id": "1.2.4.1.3",
+                      "title": "Classic PowerPC Mac OS Nanokernel",
+                      "summary": "Versions 7 through 9, handled 68k software emulation underneath."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.2.5",
+              "title": "Exokernel",
+              "subtitle": "Protection separated from management",
+              "summary": "An experimental paradigm that completely separates resource protection from resource management. Forces no high-level virtual abstractions (like files or directories) on developers. Defined by their reliance on application libraries.",
+              "children": [
+                {
+                  "id": "1.2.5.1",
+                  "title": "Library Operating System (LibOS) Abstraction",
+                  "summary": "The exokernel acts strictly as a thin security guard verifying who owns a raw disk sector or memory address. Applications link directly to unprivileged libraries (Library Operating Systems) containing only the specific filesystem or network code they choose.",
+                  "children": [
+                    {
+                      "id": "1.2.5.1.1",
+                      "title": "MIT Exokernel Projects",
+                      "summary": "XOK, Aegis \u2014 MIT exokernel research projects."
+                    },
+                    {
+                      "id": "1.2.5.1.2",
+                      "title": "JOS",
+                      "summary": "A LibOS-abstraction exokernel example."
+                    },
+                    {
+                      "id": "1.2.5.1.3",
+                      "title": "Nemesis",
+                      "summary": "A LibOS-abstraction exokernel example."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.2.6",
+              "title": "Unikernel",
+              "subtitle": "App compiled with minimal system functions",
+              "summary": "A model built upon library operating system concepts where application code is compiled directly with minimal system functions into a single, specialized, bootable binary image meant to run on a cloud hypervisor. Split by compliance standards.",
+              "children": [
+                {
+                  "id": "1.2.6.1",
+                  "title": "Clean-Slate / Language-Specific Unikernels",
+                  "summary": "Built entirely from scratch using type-safe languages. Ignore legacy Unix standards entirely, compiling only the exact lines of code needed to make a purpose-built program execute.",
+                  "children": [
+                    {
+                      "id": "1.2.6.1.1",
+                      "title": "MirageOS",
+                      "summary": "OCaml-based unikernel."
+                    },
+                    {
+                      "id": "1.2.6.1.2",
+                      "title": "HaLVM",
+                      "summary": "Haskell Lightweight Virtual Machine."
+                    },
+                    {
+                      "id": "1.2.6.1.3",
+                      "title": "LING",
+                      "summary": "Erlang-based unikernel."
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.6.2",
+                  "title": "Generalized / Legacy POSIX-Compliant Unikernels",
+                  "summary": "Built with backward compatibility in mind. Include a thin translation layer to simulate traditional operating system pathways, allowing standard, unmodified applications written in C, C++, or Java to compile directly into a unikernel.",
+                  "children": [
+                    {
+                      "id": "1.2.6.2.1",
+                      "title": "OSv",
+                      "summary": "A POSIX-compliant unikernel example."
+                    },
+                    {
+                      "id": "1.2.6.2.2",
+                      "title": "Rumprun",
+                      "summary": "Uses NetBSD rump drivers to form a unikernel footprint."
+                    },
+                    {
+                      "id": "1.2.6.2.3",
+                      "title": "Drawbridge",
+                      "summary": "A POSIX-compliant unikernel example."
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "1.2.1.2",
-          "title": "Modular Monolithic",
-          "summary": "The system still operates in a unified, high-privileged supervisor mode, but can dynamically load or unload blocks of code — Loadable Kernel Modules (LKMs) — at runtime to support new hardware or filesystems without rebooting.",
-          "children": [
-            { "id": "1.2.1.2.1", "title": "Modern Linux", "summary": "Ubuntu, Debian, Red Hat — modular monolithic kernel." },
-            { "id": "1.2.1.2.2", "title": "FreeBSD", "summary": "A modular monolithic kernel example." }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1.2.2",
-      "title": "Hybrid",
-      "subtitle": "Microkernel design, monolithic execution",
-      "summary": "An architectural compromise that maps components like a microkernel but runs them inside a single monolithic address space to eliminate performance-slowing IPC message overhead. Split by structural composition.",
-      "children": [
-        {
-          "id": "1.2.2.1",
-          "title": "Subsystem-Based Hybrids",
-          "summary": "Isolates modular operational subsystems (like the graphics rendering manager or networking layers) inside high-privilege execution modes for maximum execution speed.",
-          "children": [
-            { "id": "1.2.2.1.1", "title": "Windows NT Kernel", "summary": "Powers Windows 10 and Windows 11." }
-          ]
+          "id": "1.3",
+          "title": "Virtualization & Hypervisors",
+          "subtitle": "Cloud Foundations",
+          "summary": "Type 1 (Bare Metal), Type 2 (Hosted)"
         },
         {
-          "id": "1.2.2.2",
-          "title": "Composite / Co-Kernels",
-          "summary": "Fuses two completely different operating system architectures directly together into a single running entity.",
-          "children": [
-            { "id": "1.2.2.2.1", "title": "Apple XNU Kernel", "summary": "Powers macOS and iOS. Bridges a Mach microkernel structure together with a monolithic FreeBSD subsystem." }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1.2.3",
-      "title": "Microkernel",
-      "subtitle": "Minimal core, services in user space",
-      "summary": "The kernel is stripped down to the near-minimum code required to handle thread scheduling, virtual memory mapping, and messaging primitives. Traditional services like device drivers and file systems are kicked out into isolated user spaces. Split by design generation.",
-      "children": [
-        {
-          "id": "1.2.3.1",
-          "title": "First-Generation Microkernels",
-          "summary": "Early versions where sending data back and forth between isolated user-space processes (IPC) suffered from heavy performance overhead and slowdowns.",
-          "children": [
-            { "id": "1.2.3.1.1", "title": "Early Mach", "summary": "e.g. Mach 3.0 — first-generation microkernel example." },
-            { "id": "1.2.3.1.2", "title": "Early Chorus", "summary": "A first-generation microkernel example." }
-          ]
+          "id": "1.4",
+          "title": "Device Drivers & Firmware",
+          "subtitle": "Hardware Drivers/BIOS"
         },
         {
-          "id": "1.2.3.2",
-          "title": "Second-Generation Microkernels",
-          "summary": "Redesigned from scratch to make IPC memory-page mapping fast and lightweight, with many versions formally verified for bulletproof security.",
-          "children": [
-            { "id": "1.2.3.2.1", "title": "L4 Microkernel Family", "summary": "A second-generation microkernel family." },
-            { "id": "1.2.3.2.2", "title": "seL4", "summary": "A formally verified microkernel." },
-            { "id": "1.2.3.2.3", "title": "Minix 3", "summary": "A second-generation microkernel example." },
-            { "id": "1.2.3.2.4", "title": "QNX", "summary": "Widely deployed in automotive systems." }
-          ]
+          "id": "1.5",
+          "title": "System Utilities & Shells",
+          "subtitle": "Diagnostics, Backup, Command Lines like Bash"
         }
-      ]
-    },
-    {
-      "id": "1.2.4",
-      "title": "Nanokernel",
-      "subtitle": "Extreme minimalism",
-      "summary": "An extreme variation of a microkernel shrunk down to near-total minimalism, running in privileged hardware mode to offer basic hardware timing or instruction surfaces. Classified by implementation type.",
-      "children": [
-        {
-          "id": "1.2.4.1",
-          "title": "HAL / Virtualization Nanokernels",
-          "summary": "A thin software layer that handles nothing but hardware interrupt clocks and resource mapping. Often sits underneath a normal operating system to inject real-time responsiveness into it.",
-          "children": [
-            { "id": "1.2.4.1.1", "title": "KeyKOS", "summary": "A HAL/virtualization nanokernel example." },
-            { "id": "1.2.4.1.2", "title": "Adeos", "summary": "A virtualization layer nanokernel example." },
-            { "id": "1.2.4.1.3", "title": "Classic PowerPC Mac OS Nanokernel", "summary": "Versions 7 through 9, handled 68k software emulation underneath." }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1.2.5",
-      "title": "Exokernel",
-      "subtitle": "Protection separated from management",
-      "summary": "An experimental paradigm that completely separates resource protection from resource management. Forces no high-level virtual abstractions (like files or directories) on developers. Defined by their reliance on application libraries.",
-      "children": [
-        {
-          "id": "1.2.5.1",
-          "title": "Library Operating System (LibOS) Abstraction",
-          "summary": "The exokernel acts strictly as a thin security guard verifying who owns a raw disk sector or memory address. Applications link directly to unprivileged libraries (Library Operating Systems) containing only the specific filesystem or network code they choose.",
-          "children": [
-            { "id": "1.2.5.1.1", "title": "MIT Exokernel Projects", "summary": "XOK, Aegis — MIT exokernel research projects." },
-            { "id": "1.2.5.1.2", "title": "JOS", "summary": "A LibOS-abstraction exokernel example." },
-            { "id": "1.2.5.1.3", "title": "Nemesis", "summary": "A LibOS-abstraction exokernel example." }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1.2.6",
-      "title": "Unikernel",
-      "subtitle": "App compiled with minimal system functions",
-      "summary": "A model built upon library operating system concepts where application code is compiled directly with minimal system functions into a single, specialized, bootable binary image meant to run on a cloud hypervisor. Split by compliance standards.",
-      "children": [
-        {
-          "id": "1.2.6.1",
-          "title": "Clean-Slate / Language-Specific Unikernels",
-          "summary": "Built entirely from scratch using type-safe languages. Ignore legacy Unix standards entirely, compiling only the exact lines of code needed to make a purpose-built program execute.",
-          "children": [
-            { "id": "1.2.6.1.1", "title": "MirageOS", "summary": "OCaml-based unikernel." },
-            { "id": "1.2.6.1.2", "title": "HaLVM", "summary": "Haskell Lightweight Virtual Machine." },
-            { "id": "1.2.6.1.3", "title": "LING", "summary": "Erlang-based unikernel." }
-          ]
-        },
-        {
-          "id": "1.2.6.2",
-          "title": "Generalized / Legacy POSIX-Compliant Unikernels",
-          "summary": "Built with backward compatibility in mind. Include a thin translation layer to simulate traditional operating system pathways, allowing standard, unmodified applications written in C, C++, or Java to compile directly into a unikernel.",
-          "children": [
-            { "id": "1.2.6.2.1", "title": "OSv", "summary": "A POSIX-compliant unikernel example." },
-            { "id": "1.2.6.2.2", "title": "Rumprun", "summary": "Uses NetBSD rump drivers to form a unikernel footprint." },
-            { "id": "1.2.6.2.3", "title": "Drawbridge", "summary": "A POSIX-compliant unikernel example." }
-          ]
-        }
-      ]
-    }
-  ]
-}
-        { "id": "1.3", "title": "Virtualization & Hypervisors", "subtitle": "Cloud Foundations", "summary": "Type 1 (Bare Metal), Type 2 (Hosted)" },
-        { "id": "1.4", "title": "Device Drivers & Firmware", "subtitle": "Hardware Drivers/BIOS" },
-        { "id": "1.5", "title": "System Utilities & Shells", "subtitle": "Diagnostics, Backup, Command Lines like Bash" }
       ]
     },
     {
@@ -167,11 +281,31 @@
       "title": "Infrastructure, Middleware & Server Software",
       "subtitle": "Backstage Engines",
       "children": [
-        { "id": "2.1", "title": "Web Servers & Caching", "subtitle": "HTTP Handlers, Proxies/CDNs" },
-        { "id": "2.2", "title": "Database Management Systems", "subtitle": "DBMS — Relational SQL Engines, NoSQL" },
-        { "id": "2.3", "title": "Containerization & Orchestration", "subtitle": "Docker, Kubernetes" },
-        { "id": "2.4", "title": "Enterprise Middleware & Integration", "subtitle": "Message Brokers, API Gateways" },
-        { "id": "2.5", "title": "Cloud Infrastructure Platforms", "subtitle": "IaaS & PaaS Control Planes" }
+        {
+          "id": "2.1",
+          "title": "Web Servers & Caching",
+          "subtitle": "HTTP Handlers, Proxies/CDNs"
+        },
+        {
+          "id": "2.2",
+          "title": "Database Management Systems",
+          "subtitle": "DBMS \u2014 Relational SQL Engines, NoSQL"
+        },
+        {
+          "id": "2.3",
+          "title": "Containerization & Orchestration",
+          "subtitle": "Docker, Kubernetes"
+        },
+        {
+          "id": "2.4",
+          "title": "Enterprise Middleware & Integration",
+          "subtitle": "Message Brokers, API Gateways"
+        },
+        {
+          "id": "2.5",
+          "title": "Cloud Infrastructure Platforms",
+          "subtitle": "IaaS & PaaS Control Planes"
+        }
       ]
     },
     {
@@ -179,10 +313,26 @@
       "title": "Application Software",
       "subtitle": "User-Facing Tools",
       "children": [
-        { "id": "3.1", "title": "Web Browsers & Productivity", "subtitle": "Chrome, Edge, Word, Sheets" },
-        { "id": "3.2", "title": "Communication & Media", "subtitle": "Slack, Zoom, VLC, Streaming" },
-        { "id": "3.3", "title": "Content Creation & Gaming", "subtitle": "Adobe, Blender, Steam" },
-        { "id": "3.4", "title": "Enterprise Operations", "subtitle": "ERP, CRM" }
+        {
+          "id": "3.1",
+          "title": "Web Browsers & Productivity",
+          "subtitle": "Chrome, Edge, Word, Sheets"
+        },
+        {
+          "id": "3.2",
+          "title": "Communication & Media",
+          "subtitle": "Slack, Zoom, VLC, Streaming"
+        },
+        {
+          "id": "3.3",
+          "title": "Content Creation & Gaming",
+          "subtitle": "Adobe, Blender, Steam"
+        },
+        {
+          "id": "3.4",
+          "title": "Enterprise Operations",
+          "subtitle": "ERP, CRM"
+        }
       ]
     },
     {
@@ -190,10 +340,26 @@
       "title": "Development Software",
       "subtitle": "Engineering Tools",
       "children": [
-        { "id": "4.1", "title": "Languages & API Specifications", "subtitle": "SQL, Web, High-Level, REST/GraphQL Rules" },
-        { "id": "4.2", "title": "Compilers, Interpreters, Runtimes", "subtitle": "GCC, Python, Node.js" },
-        { "id": "4.3", "title": "IDEs & Editors", "subtitle": "VS Code, IntelliJ" },
-        { "id": "4.4", "title": "Version Control, Packaging, DevOps", "subtitle": "Git, npm, Jenkins" }
+        {
+          "id": "4.1",
+          "title": "Languages & API Specifications",
+          "subtitle": "SQL, Web, High-Level, REST/GraphQL Rules"
+        },
+        {
+          "id": "4.2",
+          "title": "Compilers, Interpreters, Runtimes",
+          "subtitle": "GCC, Python, Node.js"
+        },
+        {
+          "id": "4.3",
+          "title": "IDEs & Editors",
+          "subtitle": "VS Code, IntelliJ"
+        },
+        {
+          "id": "4.4",
+          "title": "Version Control, Packaging, DevOps",
+          "subtitle": "Git, npm, Jenkins"
+        }
       ]
     },
     {
@@ -201,8 +367,16 @@
       "title": "Embedded & Real-Time",
       "subtitle": "Hardware-Bound Logic",
       "children": [
-        { "id": "5.1", "title": "Real-Time OS", "subtitle": "RTOS" },
-        { "id": "5.2", "title": "Microcontroller Firmware & Industrial", "subtitle": "SCADA/HMI" }
+        {
+          "id": "5.1",
+          "title": "Real-Time OS",
+          "subtitle": "RTOS"
+        },
+        {
+          "id": "5.2",
+          "title": "Microcontroller Firmware & Industrial",
+          "subtitle": "SCADA/HMI"
+        }
       ]
     },
     {
@@ -210,9 +384,21 @@
       "title": "Artificial Intelligence & Data",
       "subtitle": "AI/Big Data Platforms",
       "children": [
-        { "id": "6.1", "title": "Neural Networks & Models", "subtitle": "LLM, Diffusion" },
-        { "id": "6.2", "title": "ML Frameworks", "subtitle": "PyTorch, TensorFlow" },
-        { "id": "6.3", "title": "Data Processing", "subtitle": "Spark, BI/Tableau" }
+        {
+          "id": "6.1",
+          "title": "Neural Networks & Models",
+          "subtitle": "LLM, Diffusion"
+        },
+        {
+          "id": "6.2",
+          "title": "ML Frameworks",
+          "subtitle": "PyTorch, TensorFlow"
+        },
+        {
+          "id": "6.3",
+          "title": "Data Processing",
+          "subtitle": "Spark, BI/Tableau"
+        }
       ]
     },
     {
@@ -220,8 +406,16 @@
       "title": "Cyber Security",
       "subtitle": "Defensive/Offensive Systems",
       "children": [
-        { "id": "7.1", "title": "Malicious", "subtitle": "Malware, Ransomware" },
-        { "id": "7.2", "title": "Security Tools", "subtitle": "Antivirus, Firewall, SIEM" }
+        {
+          "id": "7.1",
+          "title": "Malicious",
+          "subtitle": "Malware, Ransomware"
+        },
+        {
+          "id": "7.2",
+          "title": "Security Tools",
+          "subtitle": "Antivirus, Firewall, SIEM"
+        }
       ]
     },
     {
@@ -229,8 +423,16 @@
       "title": "Scientific & Specialized",
       "subtitle": "Computing & CAD",
       "children": [
-        { "id": "8.1", "title": "Computation", "subtitle": "MATLAB, R-Studio" },
-        { "id": "8.2", "title": "Design & GIS", "subtitle": "AutoCAD, QGIS" }
+        {
+          "id": "8.1",
+          "title": "Computation",
+          "subtitle": "MATLAB, R-Studio"
+        },
+        {
+          "id": "8.2",
+          "title": "Design & GIS",
+          "subtitle": "AutoCAD, QGIS"
+        }
       ]
     },
     {
@@ -238,8 +440,16 @@
       "title": "Decentralized & Web3",
       "subtitle": "Blockchain",
       "children": [
-        { "id": "9.1", "title": "Blockchain Protocol Clients", "subtitle": "Bitcoin Core, Geth" },
-        { "id": "9.2", "title": "Smart Contracts", "subtitle": "Solidity, Foundry" }
+        {
+          "id": "9.1",
+          "title": "Blockchain Protocol Clients",
+          "subtitle": "Bitcoin Core, Geth"
+        },
+        {
+          "id": "9.2",
+          "title": "Smart Contracts",
+          "subtitle": "Solidity, Foundry"
+        }
       ]
     }
   ]
