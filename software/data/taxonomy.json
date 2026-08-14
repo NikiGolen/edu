@@ -586,15 +586,13 @@
       ]
     }
   ]
-}
-      ]
-        },
-        {
-          "id": "1.2",
-          "title": "Kernels",
-          "subtitle": "Hardware Management",
-          "summary": "The core program that mediates between hardware and every other layer of software.",
-          "children": [
+},
+{
+  "id": "1.2",
+  "title": "Kernels",
+  "subtitle": "Hardware Management",
+  "summary": "The core program that mediates between hardware and every other layer of software.",
+  "children": [
             {
               "id": "1.2.1",
               "title": "Monolithic",
