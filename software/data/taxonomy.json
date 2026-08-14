@@ -575,24 +575,22 @@
                   "summary": "A research operating system developed at Bell Labs as a successor to Unix. Represented system resources, devices, and network connections through a unified file-oriented interface."
                 },
                 {
-                  "id": "1.1.6.2.1.2",
-                  "title": "Amoeba",
-                  "summary": "A distributed research operating system that explored combining a network of workstations into an integrated computing environment."
-                }
+  "id": "1.1.6.2.1.2",
+  "title": "Amoeba",
+  "summary": "A distributed research operating system that explored combining a network of workstations into an integrated computing environment."
+}
               ]
             }
           ]
         }
       ]
-    }
-  ]
-},
-{
-  "id": "1.2",
-  "title": "Kernels",
-  "subtitle": "Hardware Management",
-  "summary": "The core program that mediates between hardware and every other layer of software.",
-  "children": [
+    },
+    {
+      "id": "1.2",
+      "title": "Kernels",
+      "subtitle": "Hardware Management",
+      "summary": "The core program that mediates between hardware and every other layer of software.",
+      "children": [
             {
               "id": "1.2.1",
               "title": "Monolithic",
