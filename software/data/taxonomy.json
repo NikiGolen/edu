@@ -1,16 +1,593 @@
 {
-  "title": "Software",
+  "id": "1",
+  "title": "System Software",
+  "subtitle": "Core Infrastructure, Control, & Maintenance",
   "children": [
     {
-      "id": "1",
-      "title": "System Software",
-      "subtitle": "Core Infrastructure, Control, & Maintenance",
+      "id": "1.1",
+      "name": "Operating Systems (OS Environments)",
+      "description": "The primary software environment that manages computer hardware resources, provides common services for application programs, and presents a user interface.",
       "children": [
         {
-          "id": "1.1",
-          "title": "Operating Systems",
-          "subtitle": "OS Environments",
-          "summary": "Desktop, Mobile, Server"
+      "id": "1.1.1",
+      "title": "General-Purpose Operating Systems (GPOS)",
+      "summary": "Flexible operating systems built to run a wide variety of everyday programs, including web browsers, office tools, media players, and games, on standard hardware.",
+      "children": [
+        {
+          "id": "1.1.1.1",
+          "title": "Desktop & Workstation OS",
+          "children": [
+            {
+              "id": "1.1.1.1.1",
+              "title": "Commercial Proprietary Ecosystems",
+              "summary": "Closed-source operating systems developed by a single vendor for commercial hardware.",
+              "children": [
+                {
+                  "id": "1.1.1.1.1.1",
+                  "title": "Windows 11",
+                  "summary": "Microsoft’s flagship desktop OS. It dominates desktop computing globally with vast enterprise and PC gaming support."
+                },
+                {
+                  "id": "1.1.1.1.1.2",
+                  "title": "macOS",
+                  "summary": "Apple’s proprietary desktop OS. It is deeply integrated with Apple hardware, favored for creative workflows and developer environments."
+                }
+              ]
+            },
+            {
+              "id": "1.1.1.1.2",
+              "title": "Open-Source Linux Distributions",
+              "summary": "Operating systems built on the open-source Linux kernel paired with desktop graphical environments.",
+              "children": [
+                {
+                  "id": "1.1.1.1.2.1",
+                  "title": "Ubuntu Desktop",
+                  "summary": "A user-friendly open-source Linux distribution. Popular for software development, customization, and workstations."
+                },
+                {
+                  "id": "1.1.1.1.2.2",
+                  "title": "Fedora Workstation",
+                  "summary": "A community-driven distribution backed by Red Hat. Integrates cutting-edge Linux features and developer tools."
+                },
+                {
+                  "id": "1.1.1.1.2.3",
+                  "title": "Arch Linux",
+                  "summary": "A lightweight, rolling-release Linux distribution. Highly customizable, allowing power users to build systems from the ground up."
+                }
+              ]
+            },
+            {
+              "id": "1.1.1.1.3",
+              "title": "BSD / Unix-Derived Desktops",
+              "summary": "Independent open-source operating systems derived directly from original Research Unix codebases.",
+              "children": [
+                {
+                  "id": "1.1.1.1.3.1",
+                  "title": "FreeBSD (Desktop configuration)",
+                  "summary": "An advanced Unix-like operating system. Known for networking performance, storage (ZFS), and system stability."
+                },
+                {
+                  "id": "1.1.1.1.3.2",
+                  "title": "GhostBSD",
+                  "summary": "A desktop-oriented distribution based on FreeBSD. Offers a user-friendly Unix desktop out of the box."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.1.1.2",
+          "title": "Mobile OS",
+          "children": [
+            {
+              "id": "1.1.1.2.1",
+              "title": "Open-Source Base with Commercial Runtime",
+              "summary": "Systems built on an open-source core paired with proprietary services and app ecosystems.",
+              "children": [
+                {
+                  "id": "1.1.1.2.1.1",
+                  "title": "Android (Google Play Stack)",
+                  "summary": "Google’s mobile OS built on the Linux kernel. Powers the majority of global smartphones with an expansive app library."
+                },
+                {
+                  "id": "1.1.1.2.1.2",
+                  "title": "Samsung One UI",
+                  "summary": "A customized Android interface created by Samsung. Adds multitasking capabilities and device ecosystem features."
+                }
+              ]
+            },
+            {
+              "id": "1.1.1.2.2",
+              "title": "Vertically Integrated Closed Platforms",
+              "summary": "Proprietary hardware and software built exclusively for a single device ecosystem.",
+              "children": [
+                {
+                  "id": "1.1.1.2.2.1",
+                  "title": "Apple iOS",
+                  "summary": "Apple’s mobile OS designed specifically for iPhone hardware. Highly optimized, secure, and tightly linked to Apple's app ecosystem."
+                },
+                {
+                  "id": "1.1.1.2.2.2",
+                  "title": "iPadOS",
+                  "summary": "Apple's specialized tablet OS based on iOS. Tailored for larger screens, stylus input, and tablet productivity."
+                }
+              ]
+            },
+            {
+              "id": "1.1.1.2.3",
+              "title": "Independent / Community Mobile Platforms",
+              "summary": "Pure open-source mobile environments created to run standard Linux software on smartphones.",
+              "children": [
+                {
+                  "id": "1.1.1.2.3.1",
+                  "title": "PostmarketOS",
+                  "summary": "A real Linux distribution adapted for mobile phones. Extends the lifespan of older smartphone hardware."
+                },
+                {
+                  "id": "1.1.1.2.3.2",
+                  "title": "Ubuntu Touch",
+                  "summary": "A mobile version of the Ubuntu OS. Offers a desktop-like convergent Linux environment on mobile hardware."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.1.1.3",
+          "title": "Server OS",
+          "children": [
+            {
+              "id": "1.1.1.3.1",
+              "title": "Enterprise Supported Linux",
+              "summary": "Commercial Linux releases backed by paid corporate security updates, technical support, and compliance guarantees.",
+              "children": [
+                {
+                  "id": "1.1.1.3.1.1",
+                  "title": "Red Hat Enterprise Linux (RHEL)",
+                  "summary": "The leading enterprise commercial Linux OS. Provides corporate data centers with mission-critical stability and support."
+                },
+                {
+                  "id": "1.1.1.3.1.2",
+                  "title": "SUSE Linux Enterprise Server (SLES)",
+                  "summary": "A major European enterprise Linux platform. Widely deployed for SAP applications and high-performance computing clusters."
+                }
+              ]
+            },
+            {
+              "id": "1.1.1.3.2",
+              "title": "Community Open-Source Server Linux",
+              "summary": "Free, community-maintained Linux operating systems optimized for web servers and cloud infrastructure.",
+              "children": [
+                {
+                  "id": "1.1.1.3.2.1",
+                  "title": "Ubuntu Server",
+                  "summary": "A widely used free Linux server distribution. The default standard for public cloud instances and web hosting."
+                },
+                {
+                  "id": "1.1.1.3.2.2",
+                  "title": "Debian",
+                  "summary": "An extremely stable, community-governed Linux OS. Renowned for rock-solid stability and low system requirements."
+                },
+                {
+                  "id": "1.1.1.3.2.3",
+                  "title": "Rocky Linux",
+                  "summary": "A community enterprise operating system designed to be downstream binary-compatible with RHEL. Provides a free alternative to commercial enterprise Linux."
+                }
+              ]
+            },
+            {
+              "id": "1.1.1.3.3",
+              "title": "Proprietary Commercial Server OS",
+              "summary": "Enterprise platforms integrating tightly with corporate directory services, storage networks, and legacy software.",
+              "children": [
+                {
+                  "id": "1.1.1.3.3.1",
+                  "title": "Windows Server",
+                  "summary": "Microsoft’s enterprise server operating system. Powers corporate networks, Active Directory user management, and corporate databases."
+                },
+                {
+                  "id": "1.1.1.3.3.2",
+                  "title": "Oracle Solaris",
+                  "summary": "A Unix-based commercial server OS. Built for high-volume database workloads and legacy enterprise infrastructure."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.1.2",
+      "title": "Real-Time Operating Systems (RTOS)",
+      "summary": "Operating systems where speed and precise timing are critical. An RTOS is designed to ensure tasks complete within defined timing constraints.",
+      "children": [
+        {
+          "id": "1.1.2.1",
+          "title": "Hard Real-Time OS",
+          "children": [
+            {
+              "id": "1.1.2.1.1",
+              "title": "Mission-Critical Safety-Certified OS",
+              "summary": "Systems where missing a timing deadline can cause total system failure or physical damage.",
+              "children": [
+                {
+                  "id": "1.1.2.1.1.1",
+                  "title": "VxWorks",
+                  "summary": "A real-time OS designed for mission-critical embedded systems. Powers aerospace systems, Mars rovers, and defense hardware where failure is not an option."
+                },
+                {
+                  "id": "1.1.2.1.1.2",
+                  "title": "Green Hills INTEGRITY",
+                  "summary": "A high-security real-time operating system. Certified for military aircraft, medical devices, and nuclear facility control."
+                },
+                {
+                  "id": "1.1.2.1.1.3",
+                  "title": "PikeOS",
+                  "summary": "A real-time operating system with built-in virtualization. Isolates critical avionics software from non-critical sub-systems on airplanes."
+                }
+              ]
+            },
+            {
+              "id": "1.1.2.1.2",
+              "title": "Safety-Critical Automotive & Industrial OS",
+              "summary": "Specialized operating systems designed for vehicle safety systems and manufacturing automation.",
+              "children": [
+                {
+                  "id": "1.1.2.1.2.1",
+                  "title": "QNX Neutrino",
+                  "summary": "A commercial real-time microkernel OS. Controls modern automotive ADAS driving hardware, braking, and digital cockpits."
+                },
+                {
+                  "id": "1.1.2.1.2.2",
+                  "title": "SafeRTOS",
+                  "summary": "A safety-critical RTOS pre-certified for international safety standards. Used in medical and industrial embedded systems."
+                },
+                {
+                  "id": "1.1.2.1.2.3",
+                  "title": "AUTOSAR OS",
+                  "summary": "A standardized automotive real-time software architecture. Provides a common platform for electronic control units (ECUs) across car manufacturers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.1.2.2",
+          "title": "Soft Real-Time OS",
+          "children": [
+            {
+              "id": "1.1.2.2.1",
+              "title": "Microcontroller / IoT Schedulers",
+              "summary": "Ultra-lightweight real-time operating systems and schedulers built to run on small microcontrollers with minimal battery power and memory.",
+              "children": [
+                {
+                  "id": "1.1.2.2.1.1",
+                  "title": "FreeRTOS",
+                  "summary": "A popular open-source real-time operating system kernel managed by AWS. Runs on IoT devices, microcontrollers, and smart sensors."
+                },
+                {
+                  "id": "1.1.2.2.1.2",
+                  "title": "Zephyr RTOS",
+                  "summary": "An open-source, security-focused RTOS hosted by the Linux Foundation. Popular in wearable devices and low-power wireless nodes."
+                },
+                {
+                  "id": "1.1.2.2.1.3",
+                  "title": "RT-Thread",
+                  "summary": "An open-source real-time operating system tailored for IoT hardware. Provides modular components such as GUI tools and networking stacks for microcontrollers."
+                }
+              ]
+            },
+            {
+              "id": "1.1.2.2.2",
+              "title": "Real-Time Kernel Patches",
+              "summary": "Standard general-purpose operating system kernels modified to execute soft real-time tasks.",
+              "children": [
+                {
+                  "id": "1.1.2.2.2.1",
+                  "title": "Linux with PREEMPT_RT patch",
+                  "summary": "A kernel modification that improves Linux determinism and latency. Used in industrial robotics and other applications where predictable response times are required."
+                },
+                {
+                  "id": "1.1.2.2.2.2",
+                  "title": "Xenomai",
+                  "summary": "A real-time development framework for Linux. Executes precise motor control routines alongside standard Linux applications."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.1.3",
+      "title": "Embedded & Smart Device Operating Systems",
+      "summary": "Lightweight operating systems embedded inside dedicated hardware devices such as smart TVs, appliances, automotive units, or routers.",
+      "children": [
+        {
+          "id": "1.1.3.1",
+          "title": "Consumer Smart Device OS",
+          "children": [
+            {
+              "id": "1.1.3.1.1",
+              "title": "Smart TV & Home Appliance Platforms",
+              "summary": "Media-focused operating systems engineered for streaming applications and smart home interfaces.",
+              "children": [
+                {
+                  "id": "1.1.3.1.1.1",
+                  "title": "LG webOS",
+                  "summary": "LG’s smart television operating system. Provides a graphical interface for smart TVs and connected appliances."
+                },
+                {
+                  "id": "1.1.3.1.1.2",
+                  "title": "Samsung Tizen",
+                  "summary": "An open-source Linux-based OS backed by Samsung. Powers smart televisions, displays, and home appliances."
+                },
+                {
+                  "id": "1.1.3.1.1.3",
+                  "title": "Android TV",
+                  "summary": "A version of Android optimized for media devices. Gives smart TVs and streaming devices access to the Google Play ecosystem."
+                }
+              ]
+            },
+            {
+              "id": "1.1.3.1.2",
+              "title": "In-Vehicle Infotainment (IVI)",
+              "summary": "Operating systems controlling dashboard screens, cabin environmental controls, and navigation.",
+              "children": [
+                {
+                  "id": "1.1.3.1.2.1",
+                  "title": "Android Automotive OS (AAOS)",
+                  "summary": "A full Android OS embedded directly into vehicle hardware. Controls cabin infotainment and vehicle settings without requiring a connected phone."
+                },
+                {
+                  "id": "1.1.3.1.2.2",
+                  "title": "Automotive Grade Linux (AGL)",
+                  "summary": "An open-source collaborative project building a shared Linux system for cars. Allows automakers to build custom dashboard experiences without starting from scratch."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.1.3.2",
+          "title": "Network Infrastructure OS",
+          "children": [
+            {
+              "id": "1.1.3.2.1",
+              "title": "Enterprise Switch & Router OS",
+              "summary": "Operating systems built to route network traffic, manage firewall rules, and maintain high-speed network connections.",
+              "children": [
+                {
+                  "id": "1.1.3.2.1.1",
+                  "title": "Cisco IOS / IOS-XE",
+                  "summary": "Cisco’s proprietary network hardware operating system. Widely deployed across enterprise routers and network switches."
+                },
+                {
+                  "id": "1.1.3.2.1.2",
+                  "title": "Juniper Junos OS",
+                  "summary": "Juniper Networks' FreeBSD-based operating system. Powers network infrastructure including internet service provider routers."
+                },
+                {
+                  "id": "1.1.3.2.1.3",
+                  "title": "Arista EOS",
+                  "summary": "A Linux-based network operating system. Powers high-speed data center switches for cloud providers and financial networks."
+                }
+              ]
+            },
+            {
+              "id": "1.1.3.2.2",
+              "title": "Consumer & Edge Router Firmware",
+              "summary": "Minimal operating systems and firmware configured for home Wi-Fi routers and local network hardware.",
+              "children": [
+                {
+                  "id": "1.1.3.2.2.1",
+                  "title": "OpenWrt",
+                  "summary": "An open-source Linux distribution for embedded network devices. Replaces basic router firmware to add advanced networking features and security."
+                },
+                {
+                  "id": "1.1.3.2.2.2",
+                  "title": "DD-WRT",
+                  "summary": "A third-party Linux-based firmware for wireless routers. Boosts home router functionality and adds features such as VPN support."
+                },
+                {
+                  "id": "1.1.3.2.2.3",
+                  "title": "OPNsense",
+                  "summary": "An open-source, FreeBSD-based firewall and routing platform. Provides advanced firewall and network-management tools for small businesses and home labs."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.1.4",
+      "title": "Cloud-Native & Container Operating Systems",
+      "summary": "Stripped-down operating systems designed specifically to run inside cloud data centers and serve as hosts for isolated software containers such as Docker and Kubernetes.",
+      "children": [
+        {
+          "id": "1.1.4.1",
+          "title": "Container Host OS",
+          "children": [
+            {
+              "id": "1.1.4.1.1",
+              "title": "Immutable Linux Hosts",
+              "summary": "Read-only or minimally mutable operating systems built primarily to run containers and update automatically.",
+              "children": [
+                {
+                  "id": "1.1.4.1.1.1",
+                  "title": "Talos Linux",
+                  "summary": "A Linux distribution built explicitly for Kubernetes. Managed entirely via an API and designed without traditional SSH-based administration."
+                },
+                {
+                  "id": "1.1.4.1.1.2",
+                  "title": "Flatcar Container Linux",
+                  "summary": "A community-driven, immutable Linux distribution. Serves as a low-maintenance host for large-scale container deployments."
+                },
+                {
+                  "id": "1.1.4.1.1.3",
+                  "title": "Fedora CoreOS",
+                  "summary": "An automatically updating, container-focused operating system. Combines an immutable-style system with container optimization."
+                },
+                {
+                  "id": "1.1.4.1.1.4",
+                  "title": "AWS Bottlerocket",
+                  "summary": "An open-source, Linux-based operating system built by Amazon Web Services. Designed to reduce maintenance and security exposure when running container workloads."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.1.4.2",
+          "title": "Minimalist Application Base Images",
+          "summary": "Lightweight operating system templates and runtime base images used inside containers to keep cloud software small and efficient.",
+          "children": [
+            {
+              "id": "1.1.4.2.1",
+              "title": "Micro-Distributions",
+              "summary": "Lightweight system environments used inside container images to keep cloud software fast and minimize unnecessary components.",
+              "children": [
+                {
+                  "id": "1.1.4.2.1.1",
+                  "title": "Alpine Linux",
+                  "summary": "A security-oriented, ultra-lightweight Linux distribution commonly used as a base for small container images."
+                },
+                {
+                  "id": "1.1.4.2.1.2",
+                  "title": "BusyBox",
+                  "summary": "Software that combines tiny versions of many common Unix utilities into a single executable. Provides basic terminal tools inside minimal containers and embedded systems."
+                },
+                {
+                  "id": "1.1.4.2.1.3",
+                  "title": "Google Distroless",
+                  "summary": "Minimal container base images containing an application runtime and required dependencies without traditional package managers or shells."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.1.5",
+      "title": "Wearable & Spatial Computing Operating Systems",
+      "summary": "Operating systems engineered for body-worn technology such as smartwatches, fitness trackers, and AR/VR headsets requiring small screen formats, sensor tracking, and low power usage.",
+      "children": [
+        {
+          "id": "1.1.5.1",
+          "title": "Wearable OS",
+          "children": [
+            {
+              "id": "1.1.5.1.1",
+              "title": "Smartwatch & Fitness OS",
+              "summary": "Compact operating systems tuned for wrist-sized displays, biometric tracking, and wireless synchronization.",
+              "children": [
+                {
+                  "id": "1.1.5.1.1.1",
+                  "title": "Apple watchOS",
+                  "summary": "Apple’s proprietary smartwatch operating system. Offers app integration and health tracking for the Apple Watch ecosystem."
+                },
+                {
+                  "id": "1.1.5.1.1.2",
+                  "title": "Wear OS by Google",
+                  "summary": "An Android platform variant designed for smartwatches. Powers watches across multiple hardware brands."
+                },
+                {
+                  "id": "1.1.5.1.1.3",
+                  "title": "Garmin OS",
+                  "summary": "A lightweight proprietary operating system optimized for battery life and endurance sports tracking."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.1.5.2",
+          "title": "Spatial & Extended Reality (XR) OS",
+          "children": [
+            {
+              "id": "1.1.5.2.1",
+              "title": "3D / Headset OS",
+              "summary": "Operating systems built for spatial computing headsets that map physical environments, track movement, and render interactive visual content.",
+              "children": [
+                {
+                  "id": "1.1.5.2.1.1",
+                  "title": "Apple visionOS",
+                  "summary": "Apple’s spatial operating system for Vision Pro. Blends digital media with the real world using eye tracking and hand gestures."
+                },
+                {
+                  "id": "1.1.5.2.1.2",
+                  "title": "Meta Horizon OS",
+                  "summary": "Meta’s Android-derived spatial operating system. Powers Meta Quest headsets and their associated VR ecosystem."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1.1.6",
+      "title": "Enterprise Infrastructure & Mainframe Operating Systems",
+      "summary": "High-capacity operating systems designed to run on enterprise mainframes and large-scale infrastructure, supporting high-volume transactions and databases with high availability.",
+      "children": [
+        {
+          "id": "1.1.6.1",
+          "title": "Mainframe OS",
+          "children": [
+            {
+              "id": "1.1.6.1.1",
+              "title": "High-Volume Transaction Mainframes",
+              "summary": "Enterprise platforms built to process extremely large transaction workloads with high reliability.",
+              "children": [
+                {
+                  "id": "1.1.6.1.1.1",
+                  "title": "IBM z/OS",
+                  "summary": "IBM’s flagship mainframe operating system. Supports large-scale transaction processing and enterprise workloads."
+                },
+                {
+                  "id": "1.1.6.1.1.2",
+                  "title": "IBM z/VM",
+                  "summary": "A mainframe virtualization operating system that allows mainframes to run multiple virtual guest systems simultaneously."
+                },
+                {
+                  "id": "1.1.6.1.1.3",
+                  "title": "IBM z/VSE",
+                  "summary": "A mainframe operating system designed for transaction-processing workloads and enterprise applications."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.1.6.2",
+          "title": "Distributed OS",
+          "children": [
+            {
+              "id": "1.1.6.2.1",
+              "title": "Clustered & Network-Transparent Systems",
+              "summary": "Systems engineered to coordinate independent networked computers so they can operate as an integrated computing environment.",
+              "children": [
+                {
+                  "id": "1.1.6.2.1.1",
+                  "title": "Plan 9 from Bell Labs",
+                  "summary": "A research operating system developed at Bell Labs as a successor to Unix. Represented system resources, devices, and network connections through a unified file-oriented interface."
+                },
+                {
+                  "id": "1.1.6.2.1.2",
+                  "title": "Amoeba",
+                  "summary": "A distributed research operating system that explored combining a network of workstations into an integrated computing environment."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+      ]
         },
         {
           "id": "1.2",
