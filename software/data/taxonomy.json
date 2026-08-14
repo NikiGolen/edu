@@ -18,29 +18,51 @@
           "subtitle": "Hardware Management",
           "summary": "The core program that mediates between hardware and every other layer of software.",
           "children": [
-            {
-              "id": "1.2.1",
-              "title": "Monolithic",
-              "subtitle": "Single high-privileged memory space",
-              "summary": "All operating system processes, drivers, and file systems run inside a single, high-privileged memory space. Split by how they handle code loading.",
-              "children": [
-                {
-                  "id": "1.2.1.1",
-                  "title": "Static Monolithic",
-                  "summary": "The entire kernel and all supported hardware drivers are compiled into one unchangeable binary file. Adding a new driver or changing a core service requires recompiling the entire kernel from scratch.",
-                  "children": [
-                    {
-                      "id": "1.2.1.1.1",
-                      "title": "Early Unix",
-                      "summary": "An early static monolithic kernel example."
-                    },
-                    {
-                      "id": "1.2.1.1.2",
-                      "title": "MS-DOS",
-                      "summary": "An early static monolithic kernel example."
-                    }
-                  ]
-                },
+            # Monolithic Kernel JSON Structure
+
+{
+  "id": "1.2.1",
+  "title": "Monolithic",
+  "subtitle": "Single high-privileged memory space",
+  "summary": "All operating system processes, drivers, and file systems run inside a single, high-privileged memory space. Split by how they handle code loading.",
+  "children": [
+    {
+      "id": "1.2.1.1",
+      "title": "Static Monolithic",
+      "summary": "The entire kernel and all supported hardware drivers are compiled into one unchangeable binary file. Adding a new driver or changing a core service requires recompiling the entire kernel from scratch.",
+      "children": [
+        {
+          "id": "1.2.1.1.1",
+          "title": "Traditional UNIX (System V / Early BSD)",
+          "summary": "The grandfather of modern operating systems. Hardware drivers, network protocols, and file systems were welded into a single block of code. Adding new hardware required manually rewriting the source code and rebuilding the entire system."
+        },
+        {
+          "id": "1.2.1.1.2",
+          "title": "MS-DOS",
+
+          "summary": "The ultimate simple monolith. It featured absolutely no separation or interior walls between user applications and the core operating system, meaning a single bug in any program would instantly crash the whole machine."
+        },
+        {
+          "id": "1.2.1.1.3",
+          "title": "Early Linux (Pre-1995)",
+          "summary": "The original versions of Linux. Before loadable modules were invented, if you bought a new sound card, you had to manually download its driver code, paste it into the core operating system files, and recompile the entire OS from scratch to use it."
+        },
+        {
+          "id": "1.2.1.1.4",
+          "title": "IBM z/TPF",
+          "summary": "A specialized ultra-fast system used by airlines and credit card networks. It runs everything in one single, raw memory space with no modular overhead, allowing it to handle millions of real-time transactions per second without slowing down."
+        },
+        {
+          "id": "1.2.1.1.5",
+          "title": "XTS-400",
+          "summary": "A high-assurance, military-grade operating system. It uses a rigid, unchangeable static layout so security engineers can thoroughly audit every single line of code, ensuring absolutely no hidden loopholes or modifications can be sneaked in later."
+        },
+        {
+          "id": "1.2.1.1.6",
+
+          "title": "Embedded RTOS (Real-Time Operating Systems)",
+          "summary": "The fixed software baked onto chips inside microwaves, anti-lock car brakes, or digital watches. Because these devices only perform one specific job, the kernel is permanently written at the factory, never updates, and runs instantly."
+        },
                 {
                   "id": "1.2.1.2",
                   "title": "Modular Monolithic",
