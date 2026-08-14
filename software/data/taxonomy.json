@@ -18,7 +18,6 @@
           "subtitle": "Hardware Management",
           "summary": "The core program that mediates between hardware and every other layer of software.",
           "children": [
-            # Monolithic Kernel JSON Structure
 
 {
   "id": "1.2.1",
