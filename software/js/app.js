@@ -147,11 +147,10 @@ async function openNode(node) {
   const md = await tryFetchContent(node.id);
   if (md) {
     prose.innerHTML = marked.parse(md);
-  } else if (node.summary) {
-    prose.innerHTML = '';
-  } else {
+  } else if (!node.summary) {
     prose.outerHTML = '<p class="empty-note">No write-up yet — add content/' + node.id + '.md to expand this entry.</p>';
   }
+  // else: summary was already rendered by renderPanelSkeleton — leave it in place
 
   const childWrap = els.panelContent.querySelector('.panel-children');
   if (node.children && node.children.length) {
