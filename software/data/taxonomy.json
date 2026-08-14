@@ -12,13 +12,6 @@
           "subtitle": "OS Environments",
           "summary": "Desktop, Mobile, Server"
         },
-        {
-          "id": "1.2",
-          "title": "Kernels",
-          "subtitle": "Hardware Management",
-          "summary": "The core program that mediates between hardware and every other layer of software.",
-          "children": [
-
 {
   "id": "1.2.1",
   "title": "Monolithic",
@@ -28,7 +21,7 @@
     {
       "id": "1.2.1.1",
       "title": "Static Monolithic",
-      "summary": "The entire kernel and all supported hardware drivers are compiled into one unchangeable binary file. Adding a new driver or changing a core service requires recompiling the entire kernel from scratch.",
+      "summary": "The entire kernel and all supported hardware drivers are compiled into one unchangeable binary file. Adding a new driver or changing a core service requires recompiling the entire kernel code from scratch.",
       "children": [
         {
           "id": "1.2.1.1.1",
@@ -61,26 +54,29 @@
 
           "title": "Embedded RTOS (Real-Time Operating Systems)",
           "summary": "The fixed software baked onto chips inside microwaves, anti-lock car brakes, or digital watches. Because these devices only perform one specific job, the kernel is permanently written at the factory, never updates, and runs instantly."
+        }
+      ]
+    },
+    {
+      "id": "1.2.1.2",
+      "title": "Modular Monolithic",
+      "summary": "The entire system still operates in a unified, high-privileged supervisor mode, but it can dynamically load or unload blocks of code—called Loadable Kernel Modules (LKMs)—at runtime to support new hardware or filesystems without rebooting.",
+      "children": [
+        {
+          "id": "1.2.1.2.1",
+          "title": "Modern Linux (Ubuntu, Debian, Red Hat)",
+          "summary": "A modular monolithic kernel example."
         },
-                {
-                  "id": "1.2.1.2",
-                  "title": "Modular Monolithic",
-                  "summary": "The system still operates in a unified, high-privileged supervisor mode, but can dynamically load or unload blocks of code \u2014 Loadable Kernel Modules (LKMs) \u2014 at runtime to support new hardware or filesystems without rebooting.",
-                  "children": [
-                    {
-                      "id": "1.2.1.2.1",
-                      "title": "Modern Linux",
-                      "summary": "Ubuntu, Debian, Red Hat \u2014 modular monolithic kernel."
-                    },
-                    {
-                      "id": "1.2.1.2.2",
-                      "title": "FreeBSD",
-                      "summary": "A modular monolithic kernel example."
-                    }
-                  ]
-                }
-              ]
-            },
+        {
+          "id": "1.2.1.2.2",
+          "title": "FreeBSD",
+          "summary": "A modular monolithic kernel example."
+
+        }
+      ]
+    }
+  ]
+},
             {
               "id": "1.2.2",
               "title": "Hybrid",
